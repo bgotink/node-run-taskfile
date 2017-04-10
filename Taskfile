@@ -1,0 +1,21 @@
+#!/bin/bash
+
+function format {
+  git ls-files | grep -E '\.[tj]s$' | xargs clang-format -i
+}
+
+function build {
+  rm -rf lib
+  tsc --pretty
+}
+
+function test {
+  rm -rf coverage
+
+  tsc --pretty --sourceMap
+
+  nyc ava
+  nyc report --reporter=html
+}
+
+${@}

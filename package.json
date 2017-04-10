@@ -1,0 +1,25 @@
+{
+  "name": "run-taskfile",
+  "version": "0.1.0",
+  "description": "Run tasks defined in a Taskfile",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.js",
+  "repository": "https://github.com/bgotink/node-run-task.git",
+  "author": "Bram Gotink <bram@gotink.me>",
+  "license": "MIT",
+  "bin": {
+    "run": "bin/run.js"
+  },
+  "scripts": {
+    "prepublish": "./Taskfile build",
+    "format": "./Taskfile format",
+    "test": "./Taskfile test"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.12",
+    "ava": "^0.19.1",
+    "clang-format": "^1.0.49",
+    "nyc": "^10.2.0",
+    "typescript": "next"
+  }
+}
