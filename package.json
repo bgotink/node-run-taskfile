@@ -8,7 +8,8 @@
   "author": "Bram Gotink <bram@gotink.me>",
   "license": "MIT",
   "bin": {
-    "run": "bin/run.js"
+    "run": "bin/run.js",
+    "task": "bin/run.js"
   },
   "scripts": {
     "prepublish": "./Taskfile build",
