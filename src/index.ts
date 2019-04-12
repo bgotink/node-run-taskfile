@@ -4,11 +4,6 @@ import findPackages from './find-package-json';
 
 const NODE_BIN = join('node_modules', '.bin');
 
-/* istanbul ignore next */
-if (!('asyncIterator' in Symbol)) {
-  (Symbol as any).asyncIterator = Symbol.for('Symbol.asyncIterator');
-}
-
 export default async function getPath(directory?: string): Promise<string[]> {
   let paths: string[] = [];
 

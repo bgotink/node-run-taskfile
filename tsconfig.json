@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es2015",
+    "target": "esnext",
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -15,10 +15,6 @@
     ],
     "types": [
       "node"
-    ],
-    "lib": [
-      "es2017",
-      "esnext"
     ],
     "outDir": "lib",
     "declaration": true
